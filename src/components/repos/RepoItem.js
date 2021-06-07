@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 
 const RepoItem = ({ repo }) => {
   return (
-    <div className="card">
+    <div
+      className="card bg-dark"
+      style={{ display: 'flex', justifyContent: 'space-between' }}
+    >
       <h3>
         <a href={repo.html_url}>{repo.name}</a>
       </h3>
+      <h3 style={{ color: 'pink' }}>{repo.language}</h3>
     </div>
   );
 };
